@@ -2,6 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const request = require("request");
 const https = require("https");
+const apiKey = require("./key.json");
 
 const app = express();
 
@@ -33,7 +34,7 @@ app.post("/", (req, res) => {
     const url = "https://us13.api.mailchimp.com/3.0/lists/f7f3d96b3c"
     const options = {
         method: "POST",
-        auth: "key:625bd1bacf016aa717083a472a4a7ecb-us13"
+        auth: apiKey.keys
     }
     // connect to API server
     const request = https.request(url, options, (response) => {
