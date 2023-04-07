@@ -30,7 +30,7 @@ app.post("/", (req, res) => {
     // convert obj to json string
     const jasonData = JSON.stringify(data);
 
-    const url = "https://us13.api.mailchimp.com/3.0/lists/f7f3d96b3c"
+    const url = "https://us13.api.mailchimp.com/3.0/lists/f7f3d96b3"
     const options = {
         method: "POST",
         auth: "key:625bd1bacf016aa717083a472a4a7ecb-us13c"
